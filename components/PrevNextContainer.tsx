@@ -66,14 +66,14 @@ const PrevNextContainer = () => {
         }
 
         const before = index > 0 ? array[index - 1] : null;
-        const current = array[index];
+        // const current = array[index];
         const after = index < array.length - 1 ? array[index + 1] : null;
 
-        return { before, current, after };
+        return { before, after };
     }
 
 
-    const { before, current, after } = getSurroundingElements(projects, 'link', pathname)
+    const { before, after } = getSurroundingElements(projects, 'link', pathname)
     return (
         <div className="prev-next-container">
             {before && (
