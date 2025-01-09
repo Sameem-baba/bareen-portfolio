@@ -1,0 +1,280 @@
+.section {
+  padding-inline: 50px;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("path-to-your-svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  /* Adjust this value to make the background more or less visible */
+  z-index: -1;
+  /* This ensures the background stays behind other content */
+  pointer-events: none;
+  /* This allows clicks to pass through to elements below */
+}
+
+.project-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  min-width: 1530px;
+  background-image: url("/images/Projects Grid.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  /* Adjust this value to make the background more or less visible */
+  z-index: -1;
+  /* This ensures the background stays behind other content */
+  pointer-events: none;
+  /* This allows clicks to pass through to elements below */
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 54px;
+}
+
+.projects-title {
+  font-weight: 400;
+  line-height: 3.625rem;
+  letter-spacing: -2.5px;
+
+  /* font-size: 5.2vw; */
+  font-size: 6.25rem;
+  margin: 0;
+}
+
+.sandbox-card-container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.sandbox-card {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+
+  /* gap: 0; */
+}
+
+.sandbox-card-content {
+  margin-left: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-items: center; */
+  gap: 20px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.sandbox-card-content h2 {
+  font-weight: 500;
+  margin: 0;
+  font-size: 22px;
+}
+
+.sandbox-card p {
+  width: 500px;
+}
+
+.sandbox-card img {
+  /* width: 100%; */
+  object-fit: contain;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.sandbox-description {
+  font-size: 1.125rem;
+  font-weight: 300;
+  margin-top: 10px;
+  /* width: 50%; */
+  color: var(--primary-gray);
+}
+
+.project-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.nav-item.active {
+  background-color: var(--black);
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-item {
+  list-style: none;
+  border: 1px solid var(--light-gray);
+  cursor: pointer;
+  border-radius: 45px;
+  padding: 12px 30px;
+  color: var(--light-gray);
+  font-size: 1.125rem;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  column-gap: 50px;
+  row-gap: 80px;
+  padding-block: 90px;
+}
+
+.project-card>div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 50px;
+}
+
+.project-link {
+  grid-column: 5 / span 6;
+  /* All cards start at column 5 and take 6 columns */
+  transition: transform 0.3s;
+  opacity: 1;
+  width: 100% !important;
+}
+
+/* First project in each row */
+.project-link:nth-child(odd) {
+  grid-column: 5 / span 6;
+  /* Starts at column 5 */
+  width: 100% !important;
+}
+
+/* Second project in each row */
+.project-link:nth-child(even) {
+  grid-column: 11 / span 6;
+  /* Starts at column 11 */
+  width: 100% !important;
+}
+
+.project-link.hidden {
+  display: none;
+  /* This completely removes the element from layout */
+  opacity: 0;
+}
+
+.project-link {
+  width: 22.8% !important;
+}
+
+.project-card {
+  width: 100%;
+}
+
+.project-card>*:not(:first-child) {
+  margin-top: 32px;
+}
+
+.project-card span {
+  font-weight: 400;
+  color: #6a6868;
+}
+
+.project-card h2 {
+  margin: 0;
+  font-weight: 400;
+  min-width: 200px;
+}
+
+.project-card p {
+  margin: 0;
+  font-weight: 300;
+  text-align: end;
+  color: var(--primary-gray);
+  max-width: 250px;
+}
+
+.project-card img {
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.l-foot button {
+  display: flex;
+  gap: 5px;
+  background-color: transparent;
+  border-radius: 45px;
+  align-items: center;
+  padding: 0px 25px;
+}
+
+.l-foot button a {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+}
+
+.project-link {
+  display: block;
+  text-decoration: none;
+  /* Remove underline */
+  color: inherit;
+  margin: 0;
+  width: 22.16%;
+  padding: 0;
+}
+
+.all {
+  background-color: var(--black);
+  color: white;
+}
+
+@media (min-width: 350px) and (max-width: 1346px) {
+  .flex-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .projects-title {
+    font-size: 80px;
+  }
+
+  .project-nav ul {
+    display: flex;
+    justify-content: start;
+    padding: 0;
+  }
+}
+
+@media (min-width: 350px) and (max-width: 1020px) {
+  .project-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-link {
+    width: 50%;
+  }
+}
