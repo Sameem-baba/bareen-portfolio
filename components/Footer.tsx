@@ -61,10 +61,9 @@ const Footer = () => {
 
                     <div className="r-subfoot">
                         <h5 className="resume font-medium-18">Resume</h5>
-                        <h5 className="download">
-                            <a
-                                href="https://drive.google.com/file/d/1FVviKrMvNl-J6jXqNPcktM7Cjwligpqh/view?usp=drive_link">Download</a>
-                        </h5>
+                        <a href="https://drive.google.com/file/d/1FVviKrMvNl-J6jXqNPcktM7Cjwligpqh/view?usp=drive_link" className="download">
+                            <h5>Download</h5>
+                        </a>
                     </div>
                 </div>
             </div>

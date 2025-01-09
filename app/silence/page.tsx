@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import MainPage from "@/components/MainPage"
@@ -41,6 +42,7 @@ const UniLaundry = () => {
                 studyLink={data.studyLink}
             />
             <Footer />
+            <img src="/footerGrid.svg" alt="" className="absolute -bottom-20 -z-30 w-full object-cover" />
         </div>
     )
 }

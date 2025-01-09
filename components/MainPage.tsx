@@ -3,6 +3,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import Link from "next/link"
+import PrevNextContainer from "./PrevNextContainer"
 
 type MainPageProps = {
     topImage: string,
@@ -22,9 +23,9 @@ type MainPageProps = {
 const MainPage = ({ topImage, title, subHeading, timeline, clientList, team, roles, scopesOfProject, functions, impact, overview, studyLink }: MainPageProps) => {
     return (
         <>
-            <div className="pt-8 mb-16 px-12 flex gap-12 flex-row-reverse h-[80vh] border border-[--light-gray] pb-16">
-                <div className="scruber-container">
-                    <img className="topImg" src={topImage} id="" />
+            <div className="pt-8 mb-16 px-12 flex gap-12 flex-row-reverse min-h-fit border border-[--light-gray] pb-16">
+                <div className="scruber-container flex rounded-2xl overflow-hidden w-[68%]">
+                    <img className="rounded-2xl" src={topImage} id="" />
                 </div>
                 <div className="scrubber container-leftside">
                     <div className="scruber-about">
@@ -217,27 +218,7 @@ const MainPage = ({ topImage, title, subHeading, timeline, clientList, team, rol
                     </div>
                 )}
 
-                <div className="prev-next-container">
-                    <div className="prev">
-                        <div className="prev-flex">
-                            <img src="/chevron-left.svg" alt="" />
-                            <h1 className="font-medium-30">Previous</h1>
-                        </div>
-                        <p className="prev-next-para font-regular-18">
-                            Scruberjay - Food Waste Management Application
-                        </p>
-                    </div>
-
-                    <div className="next">
-                        <div className="next-flex">
-                            <h1 className="font-medium-30">Next</h1>
-                            <img src="/chevron-right.svg" alt="" />
-                        </div>
-                        <p className="prev-next-para font-regular-18">
-                            Scruberjay - Food Waste Management Application
-                        </p>
-                    </div>
-                </div>
+                <PrevNextContainer />
             </div>
         </>
     )

@@ -48,7 +48,6 @@
 
 /* @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"); */
 
-
 :root {
 	font-size: 16px;
 	--black: #2a2a2a;
@@ -201,6 +200,34 @@ body {
 	overflow-x: hidden;
 }
 
+.transitions:hover::before {
+	transform: scaleX(1);
+	visibility: visible;
+	opacity: 1 !important;
+}
+
+.transitions {
+	white-space: nowrap;
+	position: relative;
+}
+
+.transitions::before {
+	background-color: var(--hightlight-green);
+	border-radius: 0px 0px 4px 4px;
+	bottom: -6px;
+	content: "";
+	height: 2px;
+	left: 0px;
+	opacity: 0;
+	position: absolute;
+	right: 0px;
+	transform-origin: left center;
+	transform: scaleX(0);
+	transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+	visibility: hidden;
+	width: auto;
+}
+
 .title {
 	text-decoration: none;
 	margin: 0;
@@ -315,7 +342,8 @@ body {
 	justify-content: space-between;
 }
 
-.rights-section {}
+.rights-section {
+}
 
 .rights {
 	margin: 0;
@@ -480,11 +508,11 @@ body {
 }
 
 .scruber-container {
-	width: 68%;
-	display: flex;
+	/* width: 68%; */
+	/* display: flex; */
 	/* Added */
-	border-radius: 20px;
-	overflow: hidden;
+	/* border-radius: 20px; */
+	/* overflow: hidden; */
 }
 
 .scrubber.container-leftside {
@@ -493,8 +521,9 @@ body {
 
 .scruber-container img {
 	width: 100%;
-	height: 100%;
-	object-fit: cover;
+	/* height: 100%; */
+	object-fit: contain;
+	border-radius: 20px;
 	display: block;
 	/* Added */
 }
@@ -559,7 +588,7 @@ body {
 	border-top: 1px solid #ccc;
 }
 
-.timeline>*:not(:first-child) {
+.timeline > *:not(:first-child) {
 	margin-top: 16px;
 }
 
@@ -576,7 +605,7 @@ body {
 	font-weight: 500;
 }
 
-.clientSupport>*:not(:first-child) {
+.clientSupport > *:not(:first-child) {
 	margin-top: 16px;
 }
 
@@ -592,7 +621,7 @@ body {
 	font-weight: 500;
 }
 
-.team>*:not(:first-child) {
+.team > *:not(:first-child) {
 	margin-top: 16px;
 }
 
@@ -611,7 +640,7 @@ body {
 	line-height: 1.5rem !important;
 }
 
-.myRole>*:not(:first-child) {
+.myRole > *:not(:first-child) {
 	margin-top: 16px;
 }
 
@@ -699,7 +728,7 @@ aside {
 	padding-bottom: 56px;
 }
 
-.impact-sections>*:not(:first-child) {
+.impact-sections > *:not(:first-child) {
 	margin-top: 40px;
 }
 
@@ -709,7 +738,7 @@ aside {
 	margin-top: 0;
 }
 
-.functions-content>.function-container:last-child .func-img {
+.functions-content > .function-container:last-child .func-img {
 	margin-bottom: 0px;
 }
 
@@ -799,7 +828,7 @@ aside {
 		flex-direction: column;
 	}
 
-	.project-details>div {
+	.project-details > div {
 		width: 100%;
 	}
 }
@@ -866,15 +895,13 @@ aside {
 }
 
 .info-card {
-	background-color: #EEEFF9;
-	border-left: 4px solid #424AAF;
+	background-color: #eeeff9;
+	border-left: 4px solid #424aaf;
 	padding-inline: 16px;
 	padding-block: 24px;
 }
 
 /* Frame 395 */
-
-
 
 .info-card h2 {
 	color: var(--light-gray);
@@ -892,11 +919,11 @@ aside {
 	width: 100%;
 }
 
-.problem-content>*:not(:first-child) {
+.problem-content > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.problem-content>div>*:not(:first-child) {
+.problem-content > div > *:not(:first-child) {
 	margin-top: 30px;
 }
 
@@ -908,27 +935,27 @@ aside {
 	padding-inline: 1.1rem;
 }
 
-.research-content>*:not(:first-child) {
+.research-content > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.research-content>div>*:not(:first-child) {
+.research-content > div > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.ideation-content>*:not(:first-child) {
+.ideation-content > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.ideation-content>div>*:not(:first-child) {
+.ideation-content > div > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.mockup-content>*:not(:first-child) {
+.mockup-content > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.mockup-content>div>*:not(:first-child) {
+.mockup-content > div > *:not(:first-child) {
 	margin-top: 42px;
 }
 
@@ -946,7 +973,7 @@ ol {
 	color: var(--black);
 }
 
-.reasearch-first-div>*:not(:first-child) {
+.reasearch-first-div > *:not(:first-child) {
 	margin-top: 30px;
 }
 
@@ -980,7 +1007,8 @@ ol {
 	margin-top: 42px;
 }
 
-.ideation .problem-img {}
+.ideation .problem-img {
+}
 
 .mockups {
 	display: flex;
@@ -1014,11 +1042,11 @@ ol {
 	color: var(--caption-gray);
 }
 
-.testing-content>*:not(:first-child) {
+.testing-content > *:not(:first-child) {
 	margin-top: 42px;
 }
 
-.testing-content>div>*:not(:first-child) {
+.testing-content > div > *:not(:first-child) {
 	margin-top: 42px;
 }
 

@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
+
 import type { Metadata } from "next";
 import "./globals.css";
-import Image from "next/image";
+// import Image from "next/image";
+
 
 
 export const metadata: Metadata = {
@@ -19,9 +22,7 @@ export default function RootLayout({
       <body
         className={` w-screen relative`}
       >
-        <Image src="/backgroundGrid.png" alt="" className="absolute top-0 -z-30 " height={400} width={1800} objectFit="contain" />
         {children}
-        <Image src="/footerGrid.svg" alt="" className="absolute -bottom-20 -z-30 " height={400} width={1800} objectFit="contain" />
 
       </body>
     </html>

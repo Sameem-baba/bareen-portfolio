@@ -1,21 +1,25 @@
+"use client"
+
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 const Header = () => {
+    const router = useRouter()
     return (
         <div className="sticky top-10 mt-8 mx-[2%] z-50 flex justify-between items-center py-6 px-10 rounded-[72px] border-[1.25px] border-solid border-[rgba(255, 255, 255, 0.7)]  bg-gradient-to-l from-[rgba(73, 69, 60, 0.08) 4.9%] to-[rgba(250, 246, 238, 0.5)] shadow-lg backdrop-blur-xl w-[96%]">
             <div>
-                <h5 className="title text-xl" >
-                    <Link href="/">Bareen Parvez</Link>
-                </h5>
+                <div className="title text-xl" >
+                    <div onClick={() => router.push('/')} className="cursor-pointer">Bareen Parvez</div>
+                </div>
             </div>
 
             <div className="flex items-center gap-6">
-                <h5 className="title font-regular-16 md:block hidden"><Link className="text-[--black]" href="/">About</Link></h5>
-                <h5 className="title font-regular-16 md:block hidden">
-                    <Link href="/projects">Projects</Link>
-                </h5>
-                <h5 className="title font-regular-16 md:block hidden"><Link href="">Resume</Link></h5>
-                <h5 className="title font-regular-16 md:block hidden"><Link href="">Contact</Link></h5>
+                <div className="title font-regular-16 transitions hover:text-[--hightlight-green] cursor-pointer md:block hidden"><Link className="text-[--black]" href="/">About</Link></div>
+                <div onClick={() => router.push('/projects')} className="title font-regular-16 transitions cursor-pointer md:block hidden">
+                    Projects
+                </div>
+                <div className="title font-regular-16 transitions md:block hidden"><Link href="https://drive.google.com/file/d/1FVviKrMvNl-J6jXqNPcktM7Cjwligpqh/view?usp=drive_link" replace>Resume</Link></div>
+                <div className="title font-regular-16 transitions md:block hidden"><Link href="mailto:neerabparvez1@gmail.com">Contact</Link></div>
 
                 <svg className="md:hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                     fill="currentColor">

@@ -6,79 +6,81 @@ import Footer from "@/components/Footer"
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useState } from "react"
+
+const projects = [
+    {
+        name: "Councelopedia",
+        desc: "Digital tool for young migrants in Germany",
+        image: "/.webp/Councelpedia/Mainpage/Find a counselor 1.webp",
+        dataCategory: "UI/UX",
+        link: '/councelopedia'
+    },
+    {
+        name: "UNILaundry",
+        desc: "Student Dormitory Laundry Companion",
+        image: "/.webp/UNILaundry/UNILaundry.webp",
+        dataCategory: "UI/UX",
+        link: '/unilaundry'
+    },
+    {
+        name: "Solar Impressions",
+        desc: "Energy Harvesting & Data Visualisation",
+        image: "/.webp/SolarImpressions/SolarImpressions.webp",
+        dataCategory: "Media Arts",
+        link: "/solarimpressions"
+    },
+    {
+        name: "Silence",
+        desc: "Associations from the Valley of Kashmir",
+        image: "/.webp/Silence/Cover.webp",
+        dataCategory: "Media Arts",
+        link: '/silence'
+    },
+    {
+        name: "ScruberJay",
+        desc: "Household Food Waste Management Application",
+        image: "/.webp/Scruberjay/MainPage/1.webp",
+        dataCategory: "UI/UX",
+        link: '/scruberjay'
+    },
+    {
+        name: "Trend Report 2023",
+        desc: "Graphic design trend forecasting",
+        image: "/.webp/TrendReport/1.webp",
+        dataCategory: "Graphic Design",
+        link: "/trendreport2023"
+    },
+    {
+        name: "Rose | The Coffee Company",
+        desc: "Visual identity design",
+        image: "/rose.png",
+        dataCategory: "Graphic Design",
+        link: "https://www.behance.net/gallery/120644037/ROSE-The-Coffee-Company-Brand-Identity"
+    },
+    {
+        name: "Meezan | Publishers & Distributors",
+        desc: "Visual identity design",
+        image: "/meezan.png",
+        dataCategory: "Graphic Design",
+        link: "https://www.behance.net/gallery/116630229/MEEZAN-Publishers-Distributors-Brand-Identity"
+
+    },
+    {
+        name: "Editorial Style Guide",
+        desc: "Global Citizenship Foundation India",
+        image: "/editorial.png",
+        dataCategory: "Graphic Design",
+        link: 'https://www.behance.net/gallery/118590027/Editorial-Style-Guide-Global-Citizenship-Foundation'
+
+    },
+]
 
 const Projects = () => {
     const [dataCategory, setDataCategory] = useState("all");
-    const [filteredProjects, setFilteredProjects] = useState<any>([])
+    const [filteredProjects, setFilteredProjects] = useState<any[]>(projects)
     const [number, setNumber] = useState(0)
-    const projects = [
-        {
-            name: "Councelopedia",
-            desc: "Digital tool for young migrants in Germany",
-            image: "/.webp/Councelpedia/Mainpage/Find a counselor 1.webp",
-            dataCategory: "UI/UX",
-            link: '/councelopedia'
-        },
-        {
-            name: "UNILaundry",
-            desc: "Student Dormitory Laundry Companion",
-            image: "/.webp/UNILaundry/UNILaundry.webp",
-            dataCategory: "UI/UX",
-            link: '/unilaundry'
-        },
-        {
-            name: "Solar Impressions",
-            desc: "Energy Harvesting & Data Visualisation",
-            image: "/.webp/SolarImpressions/SolarImpressions.webp",
-            dataCategory: "Media Arts",
-            link: "/solarimpressions"
-        },
-        {
-            name: "Silence",
-            desc: "Associations from the Valley of Kashmir",
-            image: "/.webp/Silence/Cover.webp",
-            dataCategory: "Media Arts",
-            link: '/silence'
-        },
-        {
-            name: "ScruberJay",
-            desc: "Household Food Waste Management Application",
-            image: "/.webp/Scruberjay/MainPage/1.webp",
-            dataCategory: "UI/UX",
-            link: '/scruberjay'
-        },
-        {
-            name: "Trend Report 2023",
-            desc: "Graphic design trend forecasting",
-            image: "/.webp/TrendReport/1.webp",
-            dataCategory: "Graphic Design",
-            link: "/trendreport2023"
-        },
-        {
-            name: "Rose | The Coffee Company",
-            desc: "Visual identity design",
-            image: "/rose.png",
-            dataCategory: "Graphic Design",
-            link: "https://www.behance.net/gallery/120644037/ROSE-The-Coffee-Company-Brand-Identity"
-        },
-        {
-            name: "Meezan | Publishers & Distributors",
-            desc: "Visual identity design",
-            image: "/meezan.png",
-            dataCategory: "Graphic Design",
-            link: "https://www.behance.net/gallery/116630229/MEEZAN-Publishers-Distributors-Brand-Identity"
 
-        },
-        {
-            name: "Editorial Style Guide",
-            desc: "Global Citizenship Foundation India",
-            image: "/editorial.png",
-            dataCategory: "Graphic Design",
-            link: 'https://www.behance.net/gallery/118590027/Editorial-Style-Guide-Global-Citizenship-Foundation'
-
-        },
-    ]
 
     const sandbox = [
         {
@@ -119,22 +121,19 @@ const Projects = () => {
         },
     ]
 
+    // const memoizedProjects = useMemo(() => projects, [projects]);
 
-    useEffect(() => {
-
-        if (dataCategory === "all") {
-            setFilteredProjects(projects)
-        } else {
-            setFilteredProjects(projects.filter((pro) => pro.dataCategory === dataCategory))
-        }
-
-
-
-    }, [dataCategory, projects])
+    // useEffect(() => {
+    //     if (dataCategory === "all") {
+    //         setFilteredProjects(projects);
+    //     } else {
+    //         setFilteredProjects(projects.filter((pro) => pro.dataCategory === dataCategory));
+    //     }
+    // }, [memoizedProjects, dataCategory]);
 
     return (
         <div>
-            <div className="project-grid -mt-7"></div>
+            <img src="/projectsGrid.svg" alt="" className="absolute -top-20 -z-30 w-full object-cover" />
             <Header />
 
             <div className="px-10" style={{ marginTop: "70px" }}>
@@ -142,14 +141,29 @@ const Projects = () => {
                     <h1 className="font-normal text-8xl font-regular-100">Projects</h1>
                     <div className="project-nav">
                         <ul className="flex flex-wrap gap-4 p-0 mb-0 ">
-                            <li className={`font-medium-18 nav-item ${dataCategory === "all" && "bg-[--black] text-white"}`} data-category="all" onClick={() => setDataCategory("all")}>All</li>
-                            <li className={`font-medium-18 nav-item ${dataCategory === "UI/UX" && "bg-[--black] text-white"}`} data-category="UI/UX" onClick={() => setDataCategory("UI/UX")}>
+                            <li className={`font-medium-18 nav-item ${dataCategory === "all" && "bg-[--black] text-white"}`} data-category="all" onClick={() => {
+                                setDataCategory("all")
+                                setFilteredProjects(projects)
+                            }
+                            }>All</li>
+                            <li className={`font-medium-18 nav-item ${dataCategory === "UI/UX" && "bg-[--black] text-white"}`} data-category="UI/UX" onClick={() => {
+                                setDataCategory("UI/UX")
+                                setFilteredProjects(projects.filter((pro) => pro.dataCategory === "UI/UX"))
+                            }}>
                                 UI/UX
                             </li>
-                            <li className={`font-medium-18 nav-item ${dataCategory === "Media Arts" && "bg-[--black] text-white"}`} data-category="Media Arts" onClick={() => setDataCategory("Media Arts")}>
+                            <li className={`font-medium-18 nav-item ${dataCategory === "Media Arts" && "bg-[--black] text-white"}`} data-category="Media Arts" onClick={() => {
+                                setDataCategory("Media Arts")
+                                setFilteredProjects(projects.filter((pro) => pro.dataCategory === "Media Arts"))
+
+                            }}>
                                 Media Arts
                             </li>
-                            <li className={`font-medium-18 nav-item ${dataCategory === "Graphic Design" && "bg-[--black] text-white"}`} data-category="Graphic Design" onClick={() => setDataCategory("Graphic Design")}>
+                            <li className={`font-medium-18 nav-item ${dataCategory === "Graphic Design" && "bg-[--black] text-white"}`} data-category="Graphic Design" onClick={() => {
+                                setDataCategory("Graphic Design")
+                                setFilteredProjects(projects.filter((pro) => pro.dataCategory === "Graphic Design"))
+
+                            }}>
                                 Graphic Design
                             </li>
                         </ul>
@@ -213,6 +227,8 @@ const Projects = () => {
             </div>
 
             <Footer />
+            <img src="/footerGrid.svg" alt="" className="absolute -bottom-20 -z-30 w-full object-cover" />
+
         </div>
     )
 }
