@@ -14,7 +14,7 @@ export default function Home() {
       <SelectedWorks />
       <DesignServices />
       <Footer />
-      <img src="/footerGrid.svg" alt="" className="absolute -bottom-20 -z-30 w-full object-cover" />
+      <img src="/footerGrid.svg" alt="" className="absolute bottom-0 -z-30 w-full object-cover" />
     </div>
   );
 }

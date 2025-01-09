@@ -25,7 +25,7 @@ const data = {
 
 const UniLaundry = () => {
     return (
-        <div>
+        <div className="relative">
             <Header />
             <MainPage
                 clientList={data.clientSupport}
@@ -42,7 +42,7 @@ const UniLaundry = () => {
                 studyLink={data.studyLink}
             />
             <Footer />
-            <img src="/footerGrid.svg" alt="" className="absolute -bottom-20 -z-30 w-full object-cover" />
+            <img src="/footerGrid.svg" alt="" className="absolute bottom-0 -z-30 w-full object-cover" />
         </div>
     )
 }

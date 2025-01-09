@@ -4,11 +4,11 @@ import Header from "@/components/Header"
 
 const CaseStudy = () => {
     return (
-        <div>
+        <div className="relative">
             <Header />
-            <div className="top-container">
-                <div className="scruber-container ">
-                    <img src="/.webp/Councelpedia/Mainpage/Find a counselor 1.webp" alt="" />
+            <div className="mb-16 px-12 flex gap-12 flex-row-reverse min-h-fit border justify-center items-center border-[--light-gray] pb-16">
+                <div className="scruber-container flex h-full md:h-[500px] rounded-2xl overflow-hidden w-[60%]">
+                    <img className="rounded-2xl h-full w-full object-cover" src="/.webp/Councelpedia/Mainpage/Find a counselor 1.webp" alt="" />
                 </div>
                 <div className="scrubber container-leftside">
                     <div className="scruber-about">
@@ -894,7 +894,10 @@ const CaseStudy = () => {
                 </div>
                 <Footer />
 
+
             </div>
+            <img src="/footerGrid.svg" alt="" className="absolute -bottom-5 -z-30 w-full object-cover" />
+
         </div>
     )
 }

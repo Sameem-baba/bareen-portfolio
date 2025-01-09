@@ -11,7 +11,7 @@ const data = {
         url: "/scruberjay/casestudy", // for case study, we'll append the ID
     },
     subHeading: "Household Food Waste Management Application",
-    topImg: "/.webp/Scruberjay/MainPage/1.webp",
+    topImg: "/.webp/Scruberjay/MainPage/cover.webp",
     timeline: "September 2021-December 2021",
     clientSupport: [
         "HPI School of Design Thinking",
@@ -70,7 +70,7 @@ const data = {
 
 const ScruberJay = () => {
     return (
-        <div>
+        <div className="relative">
             <Header />
             <MainPage
                 clientList={data.clientSupport}
@@ -87,6 +87,8 @@ const ScruberJay = () => {
                 studyLink={data.studyLink}
             />
             <Footer />
+
+            <img src="/footerGrid.svg" alt="" className="absolute bottom-0 -z-30 w-full object-cover" />
         </div>
     )
 }

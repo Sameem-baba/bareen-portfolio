@@ -119,6 +119,9 @@ const Coucelopedia = () => {
                 studyLink={data.studyLink}
             />
             <Footer />
+
+            <img src="/footerGrid.svg" alt="" className="absolute bottom-0 -z-30 w-full object-cover" />
+
         </div>
     )
 }

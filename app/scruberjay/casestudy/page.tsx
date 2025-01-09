@@ -7,9 +7,9 @@ const CaseStudy = () => {
         <div>
             <Header />
 
-            <div className="top-container">
-                <div className="scruber-container ">
-                    <img src="/newScruber.png" alt="" />
+            <div className="mb-16 px-12 flex gap-12 flex-row-reverse min-h-fit border justify-center items-center border-[--light-gray] pb-16">
+                <div className="scruber-container flex h-full md:h-[500px] rounded-2xl overflow-hidden w-[60%]">
+                    <img src="/newScruber.png" className="rounded-2xl h-full w-full object-cover" alt="" />
                 </div>
                 <div className="scrubber container-leftside">
                     <div className="scruber-about">
@@ -604,6 +604,7 @@ const CaseStudy = () => {
                 </div>
             </div>
             <Footer />
+            <img src="/footerGrid.svg" alt="" className="absolute bottom-0 -z-30 w-full object-cover" />
 
 
         </div>

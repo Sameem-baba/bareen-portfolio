@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation"
 const Header = () => {
     const router = useRouter()
     return (
-        <div className="sticky top-10 mt-8 mx-[2%] z-50 flex justify-between items-center py-6 px-10 rounded-[72px] border-[1.25px] border-solid border-[rgba(255, 255, 255, 0.7)]  bg-gradient-to-l from-[rgba(73, 69, 60, 0.08) 4.9%] to-[rgba(250, 246, 238, 0.5)] shadow-lg backdrop-blur-xl w-[96%]">
+        <div className="sticky header-bg top-10 mt-8 mx-[2%] z-50 flex justify-between items-center py-6 px-10 rounded-[72px] border-[1.25px] border-solid border-[rgba(255, 255, 255, 0.7)]  bg-gradient-to-l from-[rgba(73, 69, 60, 0.08) 4.9%] to-[rgba(250, 246, 238, 0.5)] shadow-lg backdrop-blur-xl w-[96%]">
             <div>
                 <div className="title text-xl" >
                     <div onClick={() => router.push('/')} className="cursor-pointer">Bareen Parvez</div>

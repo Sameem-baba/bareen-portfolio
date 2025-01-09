@@ -23,11 +23,11 @@ type MainPageProps = {
 const MainPage = ({ topImage, title, subHeading, timeline, clientList, team, roles, scopesOfProject, functions, impact, overview, studyLink }: MainPageProps) => {
     return (
         <>
-            <div className="pt-8 mb-16 px-12 flex gap-12 flex-row-reverse min-h-fit border border-[--light-gray] pb-16">
-                <div className="scruber-container flex rounded-2xl overflow-hidden w-[68%]">
-                    <img className="rounded-2xl" src={topImage} id="" />
+            <div className="mb-16 px-12 flex gap-12 flex-row-reverse min-h-fit border justify-center items-center border-[--light-gray] pb-16">
+                <div className="scruber-container flex h-full md:h-[500px] rounded-2xl overflow-hidden w-[60%]">
+                    <img className="rounded-2xl h-full w-full object-cover" src={topImage} id="" />
                 </div>
-                <div className="scrubber container-leftside">
+                <div className="scrubber w-full container-leftside">
                     <div className="scruber-about">
                         <div className="scruber-flex">
                             <h1 className="scruber-title  font-regular-90">{title}</h1>
@@ -51,7 +51,7 @@ const MainPage = ({ topImage, title, subHeading, timeline, clientList, team, rol
                                 className="font-medium-16"
                                 style={{
                                     fontSize: "1rem !important",
-                                    fontWeight: " 500 !important",
+                                    fontWeight: "500 !important",
                                     lineHeight: "1.375rem !important"
                                 }}
 
@@ -66,7 +66,7 @@ const MainPage = ({ topImage, title, subHeading, timeline, clientList, team, rol
                                 className="font-medium-16"
                                 style={{
                                     fontSize: "1rem !important",
-                                    fontWeight: " 500 !important",
+                                    fontWeight: "500 !important",
                                     lineHeight: "1.375rem !important"
                                 }}
                             >
@@ -75,7 +75,7 @@ const MainPage = ({ topImage, title, subHeading, timeline, clientList, team, rol
                             <div className="client-list font-regular-16">{clientList.map((client: any, i: number) => (
                                 <p style={{
                                     fontSize: "1rem !important",
-                                    fontWeight: " 500 !important",
+                                    fontWeight: "400 !important",
                                     lineHeight: "1.375rem !important"
                                 }}
                                     key={i}
