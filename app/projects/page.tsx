@@ -2,6 +2,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 'use client'
 
+import Footer from "@/components/Footer"
 /* eslint-disable @next/next/no-img-element */
 import Header from "@/components/Header"
 import Link from "next/link"
@@ -157,7 +158,7 @@ const Projects = () => {
 
                 <div className="project-container">
                     {filteredProjects.map((project: any, i: number) => (
-                        <Link href={project.link} key={i} className="project-link">
+                        <Link href={project.link} target="_blank" rel="noopener noreferrer" key={i} className="project-link">
                             <div className="w-full" data-category={project.dataCategory}>
                                 <img className="w-full h-[300px] rounded-2xl overflow-hidden mb-0" src={project.image} alt={project.name} />
                                 <div className="flex justify-between w-full gap-12 mt-8">
@@ -172,7 +173,7 @@ const Projects = () => {
                 </div>
             </div>
 
-            <div className="px-10">
+            <div className="px-10 pb-10">
                 <div className="section">
                     <div className="flex flex-col justify-between gap-14">
                         <h1 className="projects-title font-regular-90">The Sandbox</h1>
@@ -191,14 +192,14 @@ const Projects = () => {
                                 {sandbox[number].desc}
                             </p>
                             <div className="flex justify-start items-center gap-2">
-                                <img src="/chevron-left.svg" className="h-8 w-8 p-1 border border-[--black] rounded-full" alt="" onClick={() => {
+                                <img src="/chevron-left.svg" className="h-8 w-8 p-1 border border-[--black] cursor-pointer rounded-full" alt="" onClick={() => {
                                     if (number === 0) {
                                         setNumber(6)
                                     } else {
                                         setNumber(number - 1)
                                     }
                                 }} />
-                                <img src="/chevron-right.svg" className="h-8 w-8 p-1 border border-[--black] rounded-full" alt="" onClick={() => {
+                                <img src="/chevron-right.svg" className="h-8 w-8 p-1 border border-[--black] cursor-pointer rounded-full" alt="" onClick={() => {
                                     if (number === sandbox.length - 1) { setNumber(0) } else {
                                         setNumber(number + 1)
                                     }
@@ -210,6 +211,8 @@ const Projects = () => {
                 </div>
 
             </div>
+
+            <Footer />
         </div>
     )
 }

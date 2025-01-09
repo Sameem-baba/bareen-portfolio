@@ -95,17 +95,7 @@ const CaseStudy = () => {
                         <div>
                             <h2 className="Background  font-regular-24">Background</h2>
                             <p className="p  font-regular-16">
-                                This project used a design thinking approach to address challenges in youth migration counseling services in
-                                Germany. A
-                                collaborative, multidisciplinary team worked through research, empathy-building, ideation, prototyping, and
-                                testing to
-                                develop a user-centered solution.
-                                I contributed to all phases of the project, including interviewing JMD clients and employees, conducting
-                                research, and
-                                identifying key pain points. Leveraging my expertise in visual design and UI/UX, I focused on designing the
-                                digital
-                                tool, Councelopedia, its visual system, and illustrating storyboards to effectively communicate and refine
-                                our ideas.
+                                This project used a design thinking approach to address challenges in youth migration counseling services in Germany. A collaborative, multidisciplinary team worked through research, empathy-building, ideation, prototyping, and testing to develop a user-centered solution. I contributed to all phases of the project, including interviewing JMD clients and employees, conducting research, and identifying key pain points. Leveraging my expertise in visual design and UI/UX, I focused on designing the digital tool, Councelopedia, its visual system, and illustrating storyboards to effectively communicate and refine our ideas.
                             </p>
                             <div className="info-card">
                                 <h2 className="design-challenge  font-medium-16">

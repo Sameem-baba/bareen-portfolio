@@ -5,7 +5,7 @@ import Link from "next/link"
 /* eslint-disable @next/next/no-img-element */
 const Footer = () => {
     return (
-        <div className="">
+        <div className="py-10">
             <div className="sliding-container">
                 <div className="slide">
                     {/* <!-- First set of content --> */}
